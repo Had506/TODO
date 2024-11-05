@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../font/IRANSansWeb\(FaNum\).woff') format('woff'),
+}
+*{
+    font-family: "vazir";
+}
