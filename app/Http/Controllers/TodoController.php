@@ -85,14 +85,15 @@ class TodoController extends Controller
            'categori_id'=>$request->categori_id,
         ]);
         return redirect()->route('todo.index');
-        dd($request);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Todo $todo)
+    public function destroy($id)
     {
-        //
+        $todo=Todo::find($id);
+        $todo->delete();
+        return redirect()->route('todo.index');
     }
 }
